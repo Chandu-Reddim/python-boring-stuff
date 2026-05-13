@@ -59,3 +59,15 @@ print(overlap.findall('123456\n111222'))
 # find all with groups 
 phone_re = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
 print(phone_re.findall('333-333-4444 hello 111-222-4444 123'))
+
+
+find_vowels = re.compile(r'[aeiouAEIOU]')
+match = find_vowels.findall('some chandu')
+print(match)
+
+#negation case
+
+find_vowels = re.compile(r'[^aeiouAEIOU]')
+match = find_vowels.findall('some chandu')
+print(match)
+
